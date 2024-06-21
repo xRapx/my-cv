@@ -1,0 +1,33 @@
+ui.shadcn.com : 
+	- npx shadcn-ui@latest init
+	- npx shadcn-ui@latest add input scroll-area select button sheet tabs textarea tooltip
+	- npm i framer-motion
+	- npm i react-countup
+	- npm i react-icons
+
+font/google:
+	- const jetbrainsMono = JetBrains_Mono({ 
+			subsets: ["latin"],
+			weight:["100","200","300","400","500","600","700","800"],
+			variable:"--font-jetbrainsMono"
+			});
+
+tailwind.config.js :
+	globals.css :
+		- @layer base {
+				body{
+					@apply font-primary text-black bg-primary leading-loose
+				}
+			}
+
+	fontFamily : {
+		primary : "var(--font-jetbrainsMono)"
+	}
+	colors : {
+		primary : "#fff"
+		accent: {
+			DEFAULT : "#FFFC17"
+			hover: "#FFD700"
+		}
+	}
+}
