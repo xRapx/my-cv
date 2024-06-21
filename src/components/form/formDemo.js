@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 
 /* eslint-disable @next/next/no-img-element */
-export default function formDemo() {
+export default function FormDemo() {
   const [phone, setPhone] = useState(Number);
   const [email, setEmail] = useState("");
   const inputRef = useRef();
