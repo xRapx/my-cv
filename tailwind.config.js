@@ -27,6 +27,7 @@ module.exports = {
       yl: "#BDB76B",
       black: "#333",
       white: "#fff",
+      pink: "#FFC0CB",
       accent: {
         DEFAULT: "#FFFC17",
         hover: "#FFD700",

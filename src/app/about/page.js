@@ -104,6 +104,26 @@ const skills = {
   desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, non.",
   skillList: [
     {
+      icon: <SiNextdotjs />,
+      name: "next.js",
+    },
+    {
+      icon: <FaReact />,
+      name: "react.js",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "tailwind.js",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "node.js",
+    },
+    {
+      icon: <FaFigma />,
+      name: "figma",
+    },  
+    {
       icon: <FaHtml5 />,
       name: "html 5",
     },
@@ -113,27 +133,7 @@ const skills = {
     },
     {
       icon: <FaJs />,
-      name: "javacript ",
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.js",
+      name: "javascript ",
     },
   ],
 };
@@ -172,7 +172,7 @@ const About = () => {
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About Met</TabsTrigger>
+            <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
 
           {/* content */}
