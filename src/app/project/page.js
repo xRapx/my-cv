@@ -19,57 +19,69 @@ const projects = [
   {
     id: 1,
     num: "01",
-    category: "frontend",
-    title: "Project 1",
+    category: "Ecommorse Shop",
+    title: "Full-Stack",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     stack: [
       {
-        name: "React Js",
+        name: "React.Js",
       },
       {
-        name: "SCSS",
+        name: "Redux.Toolkit",
       },
       {
-        name: "Node Js",
+        name: "Tailwind.css",
+      },
+      {
+        name: "Node.Js",
       },
     ],
-    image: "/logo1.jpg",
-    live: "",
+    image: "/category1.png",
+    live: "https://ecommorse.vercel.app/",
     github: "Lorem ipsum dolor sit amet,",
   },
   {
     id: 2,
     num: "02",
-    category: "fullstack",
-    title: "Project 2",
+    category: "Delivery Food",
+    title: "Full-Stack",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     stack: [
       {
-        name: "Next Js",
+        name: "Next.Js",
+      },
+      {
+        name: "Next.Auth",
+      },
+      {
+        name: "React.Hook",
       },
       {
         name: "Tailwind",
       },
     ],
-    image: "/logo1.jpg",
-    live: "",
+    image: "/category2.png",
+    live: "https://delivery-food-xi-two.vercel.app/",
     github: "Lorem ipsum dolor sit amet,",
   },
   {
     id: 3,
     num: "03",
-    category: "fullstack",
-    title: "Project 3",
+    category: "Social Blog",
+    title: "Full-Stack",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     stack: [
       {
-        name: "Next Js",
+        name: "Next.Js",
       },
       {
-        name: "Css",
+        name: "React.Hook",
+      },
+      {
+        name: "CSS",
       },
     ],
-    image: "/logo1.jpg",
+    image: "/category3.png",
     live: "",
     github: "Lorem ipsum dolor sit amet,",
   },
@@ -81,7 +93,7 @@ const projects = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     stack: [
       {
-        name: "Next Js",
+        name: "Next.Js",
       },
       {
         name: "Tailwind",
@@ -129,9 +141,12 @@ const Project = () => {
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project.category}
               </h2>
+              <h3 className="text-[32px] font-medium leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.title}
+              </h3>
               <p className="text-white/60">{project.desc}</p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index}>
@@ -153,13 +168,13 @@ const Project = () => {
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p className="text-primary">Live project</p>
+                        <p className="text-primary">Demo project</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
                 {/* github */}
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -193,9 +208,9 @@ const Project = () => {
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
-                          alt=""
+                          alt={project.title}
                           fill
-                          className="object-cover"
+                          className="object-contain "
                         />
                       </div>
                     </div>
@@ -203,7 +218,10 @@ const Project = () => {
                 );
               })}
               {/* btn slider */}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles=" bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" />
+              <WorkSliderBtns
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles=" bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+              />
             </Swiper>
           </div>
         </div>
