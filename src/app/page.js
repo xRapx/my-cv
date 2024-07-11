@@ -23,10 +23,7 @@ export default function Home() {
             </h1>
             {/* Description */}
             <p className="max-w-[500px] mb-9 text-[#BDB76B]">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestias sequi iusto saepe fugit voluptates, eaque, aspernatur
-              assumenda dolores quaerat quidem fugiat exercitationem. Dolores
-              animi dicta eligendi quibusdam tempore nam laborum.
+            I am eager to work in a dynamic business environment where I can hone my skills, cultivate my qualities, and enhance my problem-solving abilities to assist those around me and contribute positively to the company.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

@@ -8,26 +8,26 @@ import { motion } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "Web Development",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, libero.",
+    title: "Web Project",
+    desc: "Frontend, Backend, Devops",
     href: "/project",
   },
   {
     num: "02",
-    title: "SEO",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, libero.",
+    title: "Affiliate marketing",
+    desc: "Learning and updating skills.",
     href: "",
   },
   {
     num: "03",
     title: "Data Analytics",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, libero.",
+    desc: "Learning and updating skills.",
     href: "",
   },
   {
     num: "04",
-    title: "Ads Facebook",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, libero.",
+    title: "Ads",
+    desc: "Learning and updating skills.",
     href: "",
   },
 ];

@@ -12,7 +12,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 // about data
 const about = {
   title: "About Me",
-  desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, non.",
+  desc: "I am eager to work in a dynamic business environment where I can hone my skills, cultivate my qualities, and enhance my problem-solving abilities to assist those around me and contribute positively to the company.",
   info: [
     {
       fieldName: "Name",
@@ -45,31 +45,31 @@ const about = {
 const experience = {
   icon: "icons",
   title: "My Experience.",
-  desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, non.",
+  desc: "Still in the process of learning and expanding on the fullstack development path.",
   items: [
     {
-      company: "Interspace.",
-      position: "Font-end Developer",
+      company: "Updating....",
+      position: "Frontend Dev",
       duration: "2023 - Present",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.",
+      desc: "Updating.....",
     },
     {
-      company: "CTV Xkld & Du học.",
+      company: "CTV XKLD & Du học.",
       position: "Ads FB & GG",
       duration: "2024 - Present",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.",
+      desc: "Strategic collaborator & affiliate marketing advertising study abroad services.",
     },
     {
-      company: "Freelance Dev.",
-      position: "Web Developer",
-      duration: "2024 - Present",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.",
+      company: "Web Developer.",
+      position: "Freelance Dev",
+      duration: "2022 - Present",
+      desc: "Freelance work creates projects according to client needs.",
     },
     {
-      company: "Freelance SEO.",
+      company: "Freelance Updating...",
       position: "Data Analytics",
-      duration: "2024 - Present",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptas.",
+      duration: "2023 - Present",
+      desc: "Update and learn more knowledge about affiliate marketing and advertising.",
     },
   ],
 };
@@ -78,25 +78,50 @@ const experience = {
 const education = {
   icon: "Education",
   title: "My Education.",
-  desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, non.",
+  desc: "Update and learn more knowledge about the fullstack development path.",
   items: [
     {
       institution: "FPT Aptech.",
-      degree: "Font-end Developer",
+      degree: "Front-end Developer",
       duration: "2022",
     },
     {
       institution: "F8 Fullstack.",
       degree: "Full-Stack Developer",
-      duration: "2022",
+      duration: "2023",
     },
     {
-      institution: "Online Course.",
+      institution: "Online Course Back-end & Devops.",
       degree: "Web Full-Stack Course. ",
-      duration: "2022 - Present",
+      duration: "2023 - Present",
     },
   ],
 };
+
+// Certificate
+const certificates = {
+  icon: "Certificate",
+  title: "My Certificate.",
+  desc: "Update and learn more knowledge about the fullstack development path.",
+  items: [
+    {
+      certificate: "Information Technology Onboarding.",
+    },
+    {
+      certificate: "JavaScript Advanced.",
+    },
+    {
+      certificate: "JavaScript Basic.",
+    },
+    {
+      certificate: "Ubuntu with WSL.",
+    },
+    {
+      certificate: "HTML & CSS Certificate.",
+    },
+  ],
+};
+
 
 // skills data
 const skills = {
@@ -171,6 +196,7 @@ const About = () => {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="certificates">Certificate</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
@@ -229,6 +255,36 @@ const About = () => {
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.institution}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+             {/* certificates */}
+             <TabsContent value="certificates" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left ">
+                <h3 className="text-4xl font-bold">{certificates.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {certificates.desc}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {certificates.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
+                          {/* <span className="text-accent">{item.certificates}</span> */}
+                          {/* <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.certificate}
+                          </h3> */}
+                          <div className="flex items-center gap-3">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-accent text-xl">{item.certificate}</p>
                           </div>
                         </li>
                       );
